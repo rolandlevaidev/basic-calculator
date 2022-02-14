@@ -1,0 +1,72 @@
+:root {
+  --Independence: #394053;
+  --DarkLiver: #4e4a59;
+  --GraniteGray: #6e6362;
+  --Artichoke: #839073;
+  --Asparagus: #7cae7a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Source Code Pro", monospace;
+  font-weight: normal;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(var(--Independence), var(--DarkLiver));
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid var(--GraniteGray);
+  outline: none;
+  background-color: #ddde;
+}
+
+.calculator-grid > button:hover {
+  background-color: #eeef;
+  box-shadow: 1px 2px 5px #222;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: var(--DarkLiver);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border: 1px solid var(--Independence);
+}
+
+.output .previous-operand {
+  color: var(--Artichoke);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: var(--Asparagus);
+  font-size: 2.5rem;
+}

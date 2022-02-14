@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Source Code Pro", "Courier New", Courier, monospace;
   font-weight: normal;
 }
 
